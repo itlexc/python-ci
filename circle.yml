@@ -9,3 +9,8 @@ dependencies:
 test:
   override:
     - nosetests tests/math-test.py
+
+  post:
+    - coverage run src/*.py
+    - coverage report
+    - coveralls
